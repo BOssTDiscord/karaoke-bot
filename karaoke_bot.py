@@ -101,7 +101,7 @@ def main():
 
   # Create event loop and run!
   print('Starting Bot!')
-  bot.run(token)
+  bot.run(os.getenv("TOKEN"))
 
   # Once we get a signal to quit, logout then exit!
   bot.logout()
