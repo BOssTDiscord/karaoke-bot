@@ -6,5 +6,4 @@
 # command_prefix = +
 
 [General]
-token = {Your Token}
-command_prefix = {Your Command Prefix}
+command_prefix = g
