@@ -19,8 +19,8 @@ startup_extensions = ["modules.karaoke_bot_commands",
 # Main Function
 def main():
   # Set defaults
-  command_prefix = '!'
-  token = None
+  command_prefix = 'g'
+
 
   print('Karaoke-Bot Starting up...\nReading Config...')
 
@@ -33,8 +33,6 @@ def main():
       for item in config[section]:
         if item == 'command_prefix':
           command_prefix = config[section][item]
-        elif item == 'token':
-          token = config[section][item]
         else:
           print('Unrecognized item: {}'.format(item))
           usage()
@@ -45,7 +43,7 @@ def main():
   # Get started
   try:
     flags = 'ht:c:'
-    long_flags = ['help','token=','command-prefix=']
+    long_flags = ['help','command-prefix=']
     opts, args = getopt.getopt(sys.argv[1:], flags, long_flags)
   # Whomp, got an error
   except getopt.GetoptError as err:
